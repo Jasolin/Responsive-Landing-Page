@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+body{
+    height: 100vh;
+    background-image: url(https://img.freepik.com/premium-photo/taco-meat-delicious_919652-11820.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+li{
+    list-style: none;
+}
+
+
+
+.header:hover{
+    color: black;
+}
+
+.header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 7%;
+    color: white;
+}
+
+.header.active{
+    background: var(--secondary);
+    box-shadow: var(--box-shadow);
+    padding: 2rem 9%;
+}
+
+.header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--white);
+}
+
+.header .logo i{
+    color: var(--primary);
+    padding-right: .5rem;
+}
+
+.header .navbar a{
+    font-size: 1.7rem;
+    color: var(--white);
+    margin: 0 1rem;
+}
+
+.header .navbar a:hover,
+.header .navbar a.active{
+    color: var(--primary);
+}
+
+#menu-btn{
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--primary);
+    display: none;
+}
+
+.dropdown_menu{
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+}
+ 
+/* media queries */
+
+@media(max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .home .image img{
+        padding-left: 0;
+    }
+
+    .register form{
+        width: 100%;
+    }
+
+}
+
+@media(max-width:768px){
+    #menu-btn{
+        display: inline-block;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 110%; right: -110%;
+        width: 30rem;
+        box-shadow: var(--box-shadow);
+        border-radius: .5rem;
+        background: var(--white);
+    }
+
+    .header .navbar.active{
+        right: 2rem;
+        transition: .4s linear;
+    }
+
+    .header .navbar a{
+        font-size: 2rem;
+        margin: 2rem 2.5rem;
+        color: white;
+        display: block;
+    }
+
+    .home .content h3{
+        font-size: 4rem;
+    }
+
+}
+
+@media(max-width:450px){
+    html{
+        font-size: 50%;
+    }
+}
